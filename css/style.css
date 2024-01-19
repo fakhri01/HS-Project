@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk&display=swap');
+
+:root{
+    --primary-color: #e1003c;
+    --secondary-color: rgba(41, 39, 40, .8);
+    --background-color: #f1f2f2;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+
+.primary-btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    
+}
+
+.secondary-btn{
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container::after,
+.container::before{
+    content: " ";
+    grid-area: 1 / 1 / 2 / 2;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 2;
+    grid-column-end: 2;
+    display: grid;
+}
+
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.header-wrapper{
+    height: 100px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo{
+    width: 150px;
+}
+
+.logo img{
+    width: 100%;
+}
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-right: 1.5rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover{
+    color: black;
+}
+
+section{
+    height: 100vh;
+}
+
+.hero{
+    background-color: var(--background-color);
+    background-image: url('https://uploads-ssl.webflow.com/6105315644a26f77912a1ada/611e13a82c74407dfebd313f_semi-logo-holberton-01.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.hero h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.hero .btn{
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 80px;
+    transition: 0.3s;
+    margin-top: 1rem;
+    margin-right: 0.8rem;
+    font-weight: bold;
+    transform: scale(0.95);
+}
+
+.hero .btn:hover{
+    transform: scale(1);
+}
+
+.hero .btn:first-child{
+    margin-left: 0;
+}
+
