@@ -102,7 +102,7 @@ main{
     padding-top: 10rem;
 }
 
-.hero .btn{
+.btn{
     display: inline-block;
     padding: 1.5rem 4rem;
     border-radius: 80px;
@@ -113,13 +113,11 @@ main{
     transform: scale(0.95);
 }
 
-.hero .btn:hover{
+.btn:hover{
     transform: scale(1);
 }
 
-.hero .btn:first-child{
-    margin-left: 0;
-}
+
 
 main .content{
     height: auto;
@@ -179,4 +177,48 @@ main aside h2:first-child{
 
 main aside p{
     padding-bottom: 1rem;
+}
+
+main article{
+    grid-column: 1/4;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main article img{
+    border-radius: 40px;
+    width: 70%;
+}
+
+.article-content{
+    width: 70%;
+    text-align: left;
+}
+
+main article span{
+    display: block;
+    font-weight: normal;
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    padding-top: 1.5rem;
+}
+
+main article .article-title{
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+}
+
+
+main article .article-subtitle{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text-color);
+}
+
+main article p{
+    margin-bottom: 1rem;
+    color: var(--primary-text-color);
+    line-height: 1.6;
 }
