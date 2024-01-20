@@ -125,7 +125,7 @@ main .content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem; 
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 main .content .content-title{
@@ -221,4 +221,54 @@ main article p{
     margin-bottom: 1rem;
     color: var(--primary-text-color);
     line-height: 1.6;
+}
+footer{
+    padding: 1rem 0;
+    background-color: var(--background-color);
+}
+
+
+footer p{
+    text-align: center;
+}
+footer p a{
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px){
+    main,
+    main .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .hero{
+        height: 50vh;
+        background-size: 30%;
+        background-position: right center;
+    }
+    
+    .hero h1{
+        font-size: 36px;
+        padding-top: 7rem;
+    }
+
+    .btn{
+        padding: 1rem 2rem;
+        margin-right: 0;
+    }
+
+    main .hero,
+    main .content,
+    main .content .content-title,
+    main article{
+        grid-column: 1;
+    }
+
+    main article{
+        margin-top: 3rem;
+    }
+
+    main article img{
+        width: 80%;
+    }
 }
