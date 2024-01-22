@@ -49,10 +49,17 @@ header{
 
 .header-wrapper{
     height: 100px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between; 
     align-items: center;
 }
+
+.header-wrapper .right{
+    grid-column: 1/3;
+    text-align: right;
+}
+
 
 .logo{
     width: 150px;
@@ -60,6 +67,10 @@ header{
 
 .logo img{
     width: 100%;
+}
+
+nav ul{
+    text-align: right;
 }
 nav ul li{
     display: inline-block;
@@ -81,7 +92,7 @@ section{
     height: 100vh;
 }
 
-main{
+.home-page{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
@@ -119,7 +130,7 @@ main{
 
 
 
-main .content{
+.home-page .content{
     height: auto;
     grid-column: 1/3;
     display: grid;
@@ -128,7 +139,7 @@ main .content{
     padding: 0 1.5rem;
 }
 
-main .content .content-title{
+.home-page .content .content-title{
     grid-column: 1/3;
     text-align: center;
     font-size: 2rem;
@@ -136,50 +147,50 @@ main .content .content-title{
     margin-top: 2rem;
 }
 
-main .content .content-item img{
+.home-page .content .content-item img{
     width: 100%;
     border-radius: 2rem;
 }
 
-main .content .content-item .item-title,
-main aside .aside-subtitle{
+.home-page .content .content-item .item-title,
+.home-page aside .aside-subtitle{
     color: var(--primary-color);
     font-weight: 500;
     font-size: 0.9rem;
     margin-top: 1rem;
 }
 
-main .content .content-item .item-subtitle{
+.home-page .content .content-item .item-subtitle{
     color: var(--primary-text-color);
     line-height: 1.5;
     margin: 1rem 0;
 }
 
-main .content .content-item p{
+.home-page .content .content-item p{
     color: var(--secondary-text-color);
     padding-bottom: 1rem;
 }
 
-main aside{
+.home-page aside{
     padding: 1rem;
     background-color: var(--background-color);
 }
 
-main aside h2{
+.home-page aside h2{
     text-align: center;
     font-size: 2rem;
     padding: 1rem;
     margin: 2rem 0;
 }
-main aside h2:first-child{
+.home-page aside h2:first-child{
     margin-top: 0;
 }
 
-main aside p{
+.home-page aside p{
     padding-bottom: 1rem;
 }
 
-main article{
+.home-page article{
     grid-column: 1/4;
     margin-top: 5rem;
     display: flex;
@@ -187,9 +198,13 @@ main article{
     align-items: center;
 }
 
-main article img{
+.home-page article img{
     border-radius: 40px;
     width: 70%;
+}
+
+.small{
+    width: 20%!important;
 }
 
 .article-content{
@@ -197,7 +212,7 @@ main article img{
     text-align: left;
 }
 
-main article span{
+.home-page article span{
     display: block;
     font-weight: normal;
     color: var(--secondary-text-color);
@@ -205,19 +220,19 @@ main article span{
     padding-top: 1.5rem;
 }
 
-main article .article-title{
+.home-page article .article-title{
     color: var(--primary-color);
     margin: 1.5rem 0;
 }
 
 
-main article .article-subtitle{
+.home-page article .article-subtitle{
     font-size: 1rem;
     margin-bottom: 1rem;
     color: var(--primary-text-color);
 }
 
-main article p{
+.home-page article p{
     margin-bottom: 1rem;
     color: var(--primary-text-color);
     line-height: 1.6;
@@ -235,9 +250,21 @@ footer p a{
     color: var(--primary-color);
 }
 
-@media screen and (max-width: 768px){
-    main,
-    main .content{
+.tweets-page{
+    text-align: center;
+}
+
+.tweets-page .title-wrapper{
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    padding: 1rem 0;
+}
+
+@media screen and (max-width: 1025px){
+
+    
+    .home-page,
+    .home-page .content{
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -257,18 +284,18 @@ footer p a{
         margin-right: 0;
     }
 
-    main .hero,
-    main .content,
-    main .content .content-title,
-    main article{
+    .home-page .hero,
+    .home-page .content,
+    .home-page .content .content-title,
+    .home-page article{
         grid-column: 1;
     }
 
-    main article{
+    .home-page article{
         margin-top: 3rem;
     }
 
-    main article img{
+    .home-page article img{
         width: 80%;
     }
 }
