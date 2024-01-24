@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // write here
     if (!bool) {
       thumbnailElement.className = "small";
-        bool = true
+      bool = true;
     } else {
       thumbnailElement.className = "";
-      bool = false
+      bool = false;
     }
   });
 });
