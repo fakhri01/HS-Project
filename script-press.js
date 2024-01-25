@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let tab = "";
   data.forEach(function (item) {
-    tab += `<div id="${item.categoryName}" class="all ${item.categoryName} tabs-item">
+    tab += `<div class="all ${item.categoryName} tabs-item">
             <h3>${item.title}</h3>  
             <p>${item.text}</p>
             <div class="tabs-about">
