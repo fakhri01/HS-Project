@@ -74,13 +74,17 @@ nav ul{
 }
 nav ul li{
     display: inline-block;
+    padding-right: 1.5rem;
+}
+
+nav ul li:last-child{
+    padding-right: 0;
 }
 
 nav ul li a{
     color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 500;
-    padding-right: 1.5rem;
     transition: 0.3s;
 }
 
@@ -654,11 +658,12 @@ footer p a{
     transform: scale(0.95);
 }
 
-.programs-page .program-content{
-    display: flex;
+.programs .program-content{
+    display: none;
     box-shadow: 4px 4px 15px rgb(41 39 40 / 10%);
     border-radius: 20px;
 }
+
 
 .programs-page .program-content .left{
     width: 32%;
@@ -742,12 +747,13 @@ footer p a{
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .programs-page .hero,
     .home-page .hero{
         height: 50vh;
         background-size: 30%;
         background-position: right center;
     }
-    
+    .programs-page .hero h1,
     .home-page .hero h1{
         font-size: 36px;
         padding-top: 7rem;
@@ -818,5 +824,50 @@ footer p a{
         display: block;
         width: max-content;
     }
+
+    .programs-page .skills .container{
+        flex-direction: column;
+    }
     
+    .programs-page .skills .left{
+        margin-bottom: 2rem;
+    }
+
+    .programs-page .skills .right .skill-card{
+        width: 100%;
+    }
+    .kit{
+        height: max-content;
+        padding: 7rem 0;
+    }
+
+    .divider-red,
+    .divider-red-reverse{
+        height: 60px;
+        background-size: 200% 60px;
+    }
+    .programs-page .programs .program-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .programs .program-content{
+        flex-direction: column;
+    }
+
+    
+    .programs .program-content .left{
+        width: 100%;
+    }
+    .programs .program-content .left img{
+        border-radius: 20px 20px 0 0;
+    }
+    .programs .program-content .right{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    
+    .programs .program-content .right h2{
+        font-size: 2.3rem;
+    }
+
 }
